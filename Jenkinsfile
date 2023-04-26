@@ -2,18 +2,8 @@ pipeline {
     stages{
         stage("Build"){
             steps{
-                echo "========executing A========"
+                git "https://github.com/amitmaurya07/Jenkins_prac.git"
             }
-            post{
-                always{
-                    echo "========always========"
-                }
-                success{
-                    echo "========A executed successfully========"
-                }
-                failure{
-                    echo "========A execution failed========"
-                }
-            }
-    }   }
+        }
+    }
 }
